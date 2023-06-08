@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -88,7 +89,7 @@ namespace r6sSettingsManager
 
                     if (formHome != null)
                     {
-                        formHome.AddTabPage(tabPage);
+                        formHome.AddTabPage(tabPage,Path.GetFileName(file));
                     }
                 }
             }
