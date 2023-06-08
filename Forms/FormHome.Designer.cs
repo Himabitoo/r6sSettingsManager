@@ -1,6 +1,6 @@
 ﻿namespace r6sSettingsManager
 {
-    partial class FormToolSettings
+    partial class FormHome
     {
         /// <summary>
         /// Required designer variable.
@@ -28,31 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.tabControlIni = new System.Windows.Forms.TabControl();
             this.SuspendLayout();
             // 
-            // dateTimePicker1
+            // tabControlIni
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(252, 260);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 19);
-            this.dateTimePicker1.TabIndex = 0;
+            this.tabControlIni.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlIni.Font = new System.Drawing.Font("MS UI Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.tabControlIni.Location = new System.Drawing.Point(0, 0);
+            this.tabControlIni.Name = "tabControlIni";
+            this.tabControlIni.SelectedIndex = 0;
+            this.tabControlIni.Size = new System.Drawing.Size(800, 450);
+            this.tabControlIni.TabIndex = 0;
+           
             // 
-            // FormToolSettings
+            // FormHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Name = "FormToolSettings";
-            this.Text = "Tool Settings";
+            this.Controls.Add(this.tabControlIni);
+            this.Name = "FormHome";
+            this.Text = "FormHome";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TabControl tabControlIni;
     }
 }
