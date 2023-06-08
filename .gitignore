@@ -1,0 +1,18 @@
+# ビルド生成物
+/bin/
+/obj/
+
+# 実行可能ファイルとライブラリ
+*.exe
+*.dll
+*.pdb
+
+# ユーザー固有の設定ファイル
+*.user
+
+# Visual Studioのローカル設定とキャッシュ
+.vs/
+
+# プロジェクト構成設定ファイル
+App.config
+Web.config
