@@ -9,19 +9,22 @@ namespace r6sSettingsManager
     {
         //フィールド変数
         private Form activeForm;
+        private FormHome formHome;
 
         public FormMain()
         {
             InitializeComponent();
+            formHome = new FormHome();
         }
 
 
 
         private void OpenChildForm(Form childForm, object btnSender)
         {
-            if (activeForm != null)
+            if (activeForm != null && activeForm.GetType() == childForm.GetType())
             {
-                activeForm.Close();
+                // 既に同じ型の子フォームが表示されている場合は、再表示せずに終了する
+                return;
             }
 
             activeForm = childForm;
@@ -40,7 +43,7 @@ namespace r6sSettingsManager
         /// </summary>
         private void btnHome_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormHome(), sender);
+            OpenChildForm(formHome, sender);
         }
 
         /// <summary>

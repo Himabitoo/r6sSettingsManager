@@ -13,8 +13,11 @@ namespace r6sSettingsManager
 
         public void AddTabPage(TabPage tabPage, String name)
         {
-            tabPage.Text = name;
+            //tabPage.Text = name;
+            //tabControlIni.TabPages.Add(tabPage);
+
             tabControlIni.TabPages.Add(tabPage);
+            tabPage.Text = name;
         }
 
     }
