@@ -44,6 +44,8 @@
             this.labelAds5x = new System.Windows.Forms.Label();
             this.textBoxAds12x = new System.Windows.Forms.TextBox();
             this.labelAds12x = new System.Windows.Forms.Label();
+            this.checkBoxApplyAll = new System.Windows.Forms.CheckBox();
+            this.btnApply = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelAds1x
@@ -51,7 +53,7 @@
             this.labelAds1x.AutoSize = true;
             this.labelAds1x.Font = new System.Drawing.Font("MS UI Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.labelAds1x.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.labelAds1x.Location = new System.Drawing.Point(200, 84);
+            this.labelAds1x.Location = new System.Drawing.Point(181, 89);
             this.labelAds1x.Name = "labelAds1x";
             this.labelAds1x.Size = new System.Drawing.Size(53, 18);
             this.labelAds1x.TabIndex = 0;
@@ -59,14 +61,14 @@
             // 
             // textBoxAds1x
             // 
-            this.textBoxAds1x.Location = new System.Drawing.Point(307, 83);
+            this.textBoxAds1x.Location = new System.Drawing.Point(288, 88);
             this.textBoxAds1x.Name = "textBoxAds1x";
             this.textBoxAds1x.Size = new System.Drawing.Size(51, 19);
             this.textBoxAds1x.TabIndex = 1;
             // 
             // textBoxAds1xHalf
             // 
-            this.textBoxAds1xHalf.Location = new System.Drawing.Point(307, 112);
+            this.textBoxAds1xHalf.Location = new System.Drawing.Point(288, 117);
             this.textBoxAds1xHalf.Name = "textBoxAds1xHalf";
             this.textBoxAds1xHalf.Size = new System.Drawing.Size(51, 19);
             this.textBoxAds1xHalf.TabIndex = 3;
@@ -76,7 +78,7 @@
             this.labelAds1xHalf.AutoSize = true;
             this.labelAds1xHalf.Font = new System.Drawing.Font("MS UI Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.labelAds1xHalf.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.labelAds1xHalf.Location = new System.Drawing.Point(200, 113);
+            this.labelAds1xHalf.Location = new System.Drawing.Point(181, 118);
             this.labelAds1xHalf.Name = "labelAds1xHalf";
             this.labelAds1xHalf.Size = new System.Drawing.Size(83, 18);
             this.labelAds1xHalf.TabIndex = 2;
@@ -84,7 +86,7 @@
             // 
             // textBoxAds2x
             // 
-            this.textBoxAds2x.Location = new System.Drawing.Point(307, 140);
+            this.textBoxAds2x.Location = new System.Drawing.Point(288, 145);
             this.textBoxAds2x.Name = "textBoxAds2x";
             this.textBoxAds2x.Size = new System.Drawing.Size(51, 19);
             this.textBoxAds2x.TabIndex = 5;
@@ -94,7 +96,7 @@
             this.labelAds2x.AutoSize = true;
             this.labelAds2x.Font = new System.Drawing.Font("MS UI Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.labelAds2x.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.labelAds2x.Location = new System.Drawing.Point(200, 141);
+            this.labelAds2x.Location = new System.Drawing.Point(181, 146);
             this.labelAds2x.Name = "labelAds2x";
             this.labelAds2x.Size = new System.Drawing.Size(53, 18);
             this.labelAds2x.TabIndex = 4;
@@ -102,7 +104,7 @@
             // 
             // textBoxAds2xHalf
             // 
-            this.textBoxAds2xHalf.Location = new System.Drawing.Point(307, 168);
+            this.textBoxAds2xHalf.Location = new System.Drawing.Point(288, 173);
             this.textBoxAds2xHalf.Name = "textBoxAds2xHalf";
             this.textBoxAds2xHalf.Size = new System.Drawing.Size(51, 19);
             this.textBoxAds2xHalf.TabIndex = 7;
@@ -112,7 +114,7 @@
             this.labelAds2xHalf.AutoSize = true;
             this.labelAds2xHalf.Font = new System.Drawing.Font("MS UI Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.labelAds2xHalf.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.labelAds2xHalf.Location = new System.Drawing.Point(200, 169);
+            this.labelAds2xHalf.Location = new System.Drawing.Point(181, 174);
             this.labelAds2xHalf.Name = "labelAds2xHalf";
             this.labelAds2xHalf.Size = new System.Drawing.Size(83, 18);
             this.labelAds2xHalf.TabIndex = 6;
@@ -120,7 +122,7 @@
             // 
             // textBoxAds3x
             // 
-            this.textBoxAds3x.Location = new System.Drawing.Point(307, 197);
+            this.textBoxAds3x.Location = new System.Drawing.Point(288, 202);
             this.textBoxAds3x.Name = "textBoxAds3x";
             this.textBoxAds3x.Size = new System.Drawing.Size(51, 19);
             this.textBoxAds3x.TabIndex = 9;
@@ -130,7 +132,7 @@
             this.labelAds3x.AutoSize = true;
             this.labelAds3x.Font = new System.Drawing.Font("MS UI Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.labelAds3x.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.labelAds3x.Location = new System.Drawing.Point(200, 198);
+            this.labelAds3x.Location = new System.Drawing.Point(181, 203);
             this.labelAds3x.Name = "labelAds3x";
             this.labelAds3x.Size = new System.Drawing.Size(53, 18);
             this.labelAds3x.TabIndex = 8;
@@ -138,7 +140,7 @@
             // 
             // textBoxAds4x
             // 
-            this.textBoxAds4x.Location = new System.Drawing.Point(307, 225);
+            this.textBoxAds4x.Location = new System.Drawing.Point(288, 230);
             this.textBoxAds4x.Name = "textBoxAds4x";
             this.textBoxAds4x.Size = new System.Drawing.Size(51, 19);
             this.textBoxAds4x.TabIndex = 11;
@@ -148,7 +150,7 @@
             this.labelAds4x.AutoSize = true;
             this.labelAds4x.Font = new System.Drawing.Font("MS UI Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.labelAds4x.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.labelAds4x.Location = new System.Drawing.Point(200, 226);
+            this.labelAds4x.Location = new System.Drawing.Point(181, 231);
             this.labelAds4x.Name = "labelAds4x";
             this.labelAds4x.Size = new System.Drawing.Size(53, 18);
             this.labelAds4x.TabIndex = 10;
@@ -156,7 +158,7 @@
             // 
             // textBoxAds5x
             // 
-            this.textBoxAds5x.Location = new System.Drawing.Point(307, 253);
+            this.textBoxAds5x.Location = new System.Drawing.Point(288, 258);
             this.textBoxAds5x.Name = "textBoxAds5x";
             this.textBoxAds5x.Size = new System.Drawing.Size(51, 19);
             this.textBoxAds5x.TabIndex = 13;
@@ -166,7 +168,7 @@
             this.labelAds5x.AutoSize = true;
             this.labelAds5x.Font = new System.Drawing.Font("MS UI Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.labelAds5x.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.labelAds5x.Location = new System.Drawing.Point(200, 254);
+            this.labelAds5x.Location = new System.Drawing.Point(181, 259);
             this.labelAds5x.Name = "labelAds5x";
             this.labelAds5x.Size = new System.Drawing.Size(53, 18);
             this.labelAds5x.TabIndex = 12;
@@ -174,7 +176,7 @@
             // 
             // textBoxAds12x
             // 
-            this.textBoxAds12x.Location = new System.Drawing.Point(307, 278);
+            this.textBoxAds12x.Location = new System.Drawing.Point(288, 283);
             this.textBoxAds12x.Name = "textBoxAds12x";
             this.textBoxAds12x.Size = new System.Drawing.Size(51, 19);
             this.textBoxAds12x.TabIndex = 15;
@@ -184,17 +186,44 @@
             this.labelAds12x.AutoSize = true;
             this.labelAds12x.Font = new System.Drawing.Font("MS UI Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.labelAds12x.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.labelAds12x.Location = new System.Drawing.Point(200, 279);
+            this.labelAds12x.Location = new System.Drawing.Point(181, 284);
             this.labelAds12x.Name = "labelAds12x";
             this.labelAds12x.Size = new System.Drawing.Size(62, 18);
             this.labelAds12x.TabIndex = 14;
             this.labelAds12x.Text = "Ads12x";
+            // 
+            // checkBoxApplyAll
+            // 
+            this.checkBoxApplyAll.AutoSize = true;
+            this.checkBoxApplyAll.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.checkBoxApplyAll.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.checkBoxApplyAll.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.checkBoxApplyAll.Location = new System.Drawing.Point(382, 201);
+            this.checkBoxApplyAll.Name = "checkBoxApplyAll";
+            this.checkBoxApplyAll.Size = new System.Drawing.Size(279, 20);
+            this.checkBoxApplyAll.TabIndex = 16;
+            this.checkBoxApplyAll.Text = "読み込まれたiniファイルすべてに適応する";
+            this.checkBoxApplyAll.UseVisualStyleBackColor = true;
+            // 
+            // btnApply
+            // 
+            this.btnApply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnApply.Font = new System.Drawing.Font("hooge 05_53", 11F);
+            this.btnApply.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnApply.Location = new System.Drawing.Point(475, 268);
+            this.btnApply.Name = "btnApply";
+            this.btnApply.Size = new System.Drawing.Size(92, 41);
+            this.btnApply.TabIndex = 17;
+            this.btnApply.Text = "適応する";
+            this.btnApply.UseVisualStyleBackColor = true;
             // 
             // UserControlIni
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
+            this.Controls.Add(this.btnApply);
+            this.Controls.Add(this.checkBoxApplyAll);
             this.Controls.Add(this.textBoxAds12x);
             this.Controls.Add(this.labelAds12x);
             this.Controls.Add(this.textBoxAds5x);
@@ -212,7 +241,7 @@
             this.Controls.Add(this.textBoxAds1x);
             this.Controls.Add(this.labelAds1x);
             this.Name = "UserControlIni";
-            this.Size = new System.Drawing.Size(800, 450);
+            this.Size = new System.Drawing.Size(1295, 743);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -236,5 +265,7 @@
         private System.Windows.Forms.Label labelAds5x;
         private System.Windows.Forms.TextBox textBoxAds12x;
         private System.Windows.Forms.Label labelAds12x;
+        private System.Windows.Forms.CheckBox checkBoxApplyAll;
+        private System.Windows.Forms.Button btnApply;
     }
 }
