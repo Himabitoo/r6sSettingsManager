@@ -6,7 +6,8 @@ namespace r6sSettingsManager
     public class IniFile
     {
         // フィールド
-        //ファイル名,path
+
+        // ファイル名,path
         private string filename;
         private string filePath;
 
@@ -15,7 +16,7 @@ namespace r6sSettingsManager
         private int sensYaw;
         private int sensPitch;
 
-        //ads感度
+        // ads感度
         private int ads1x;
         private int ads1xHalf;
         private int ads2x;
@@ -26,7 +27,7 @@ namespace r6sSettingsManager
         private int ads12x;
 
 
-        //プロパティ
+        // プロパティ
         public IniFile(string filePath)
         {
             this.filePath = filePath;

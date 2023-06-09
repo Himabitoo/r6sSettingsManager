@@ -53,7 +53,7 @@
             // 
             pictureBoxIcon.Cursor = System.Windows.Forms.Cursors.Hand;
             pictureBoxIcon.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxIcon.Image")));
-            pictureBoxIcon.Location = new System.Drawing.Point(241, 206);
+            pictureBoxIcon.Location = new System.Drawing.Point(302, 204);
             pictureBoxIcon.Name = "pictureBoxIcon";
             pictureBoxIcon.Size = new System.Drawing.Size(170, 164);
             pictureBoxIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -151,7 +151,7 @@
             this.labelGitHubUrl.AutoSize = true;
             this.labelGitHubUrl.Font = new System.Drawing.Font("hooge 05_53", 22F);
             this.labelGitHubUrl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelGitHubUrl.Location = new System.Drawing.Point(522, 218);
+            this.labelGitHubUrl.Location = new System.Drawing.Point(580, 218);
             this.labelGitHubUrl.Name = "labelGitHubUrl";
             this.labelGitHubUrl.Size = new System.Drawing.Size(134, 37);
             this.labelGitHubUrl.TabIndex = 4;
@@ -161,7 +161,7 @@
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(539, 258);
+            this.pictureBox1.Location = new System.Drawing.Point(597, 258);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(102, 100);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -174,7 +174,7 @@
             this.labelUserName.AutoSize = true;
             this.labelUserName.Font = new System.Drawing.Font("hooge 05_53", 22F);
             this.labelUserName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelUserName.Location = new System.Drawing.Point(234, 166);
+            this.labelUserName.Location = new System.Drawing.Point(295, 164);
             this.labelUserName.Name = "labelUserName";
             this.labelUserName.Size = new System.Drawing.Size(193, 37);
             this.labelUserName.TabIndex = 2;
@@ -185,7 +185,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("hooge 05_53", 24F);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(418, 78);
+            this.label2.Location = new System.Drawing.Point(448, 76);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(145, 40);
             this.label2.TabIndex = 0;

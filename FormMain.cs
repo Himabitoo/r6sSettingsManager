@@ -63,7 +63,6 @@ namespace r6sSettingsManager
             {
                 foreach (string file in selectedFiles)
                 {   
-
                     // iniファイル
                     IniFile iniFile = new IniFile(file);
                     iniFile.LoadSensValue();
