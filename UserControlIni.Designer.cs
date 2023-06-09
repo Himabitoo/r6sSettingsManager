@@ -200,9 +200,9 @@
             this.checkBoxApplyAll.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.checkBoxApplyAll.Location = new System.Drawing.Point(382, 201);
             this.checkBoxApplyAll.Name = "checkBoxApplyAll";
-            this.checkBoxApplyAll.Size = new System.Drawing.Size(279, 20);
+            this.checkBoxApplyAll.Size = new System.Drawing.Size(262, 20);
             this.checkBoxApplyAll.TabIndex = 16;
-            this.checkBoxApplyAll.Text = "読み込まれたiniファイルすべてに適応する";
+            this.checkBoxApplyAll.Text = "iniファイルすべてにこの設定を適応する";
             this.checkBoxApplyAll.UseVisualStyleBackColor = true;
             // 
             // btnApply
