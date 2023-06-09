@@ -32,8 +32,8 @@
             this.btnUpload = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnToolSettings = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
+            this.btnToolSettings = new System.Windows.Forms.Button();
             this.panelMain = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -84,20 +84,6 @@
             this.panel2.Size = new System.Drawing.Size(1035, 43);
             this.panel2.TabIndex = 1;
             // 
-            // btnToolSettings
-            // 
-            this.btnToolSettings.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnToolSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnToolSettings.Font = new System.Drawing.Font("hooge 05_53", 14F);
-            this.btnToolSettings.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnToolSettings.Location = new System.Drawing.Point(899, 0);
-            this.btnToolSettings.Name = "btnToolSettings";
-            this.btnToolSettings.Size = new System.Drawing.Size(136, 43);
-            this.btnToolSettings.TabIndex = 0;
-            this.btnToolSettings.Text = "Settings";
-            this.btnToolSettings.UseVisualStyleBackColor = true;
-            this.btnToolSettings.Click += new System.EventHandler(this.btnToolSettings_Click);
-            // 
             // btnHome
             // 
             this.btnHome.Dock = System.Windows.Forms.DockStyle.Left;
@@ -111,6 +97,20 @@
             this.btnHome.Text = "home";
             this.btnHome.UseVisualStyleBackColor = true;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
+            // btnToolSettings
+            // 
+            this.btnToolSettings.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnToolSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnToolSettings.Font = new System.Drawing.Font("hooge 05_53", 14F);
+            this.btnToolSettings.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnToolSettings.Location = new System.Drawing.Point(899, 0);
+            this.btnToolSettings.Name = "btnToolSettings";
+            this.btnToolSettings.Size = new System.Drawing.Size(136, 43);
+            this.btnToolSettings.TabIndex = 0;
+            this.btnToolSettings.Text = "Settings";
+            this.btnToolSettings.UseVisualStyleBackColor = true;
+            this.btnToolSettings.Click += new System.EventHandler(this.btnToolSettings_Click);
             // 
             // panelMain
             // 
