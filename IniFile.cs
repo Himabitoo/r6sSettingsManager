@@ -39,7 +39,7 @@ namespace r6sSettingsManager
         public int Ads12x { get { return ads12x; } set { ads12x = value; } }
 
 
-        //メソッド
+        // 読み込んでフィールドに代入
         public void LoadSensValue()
         {
             //Ini読み込み
@@ -54,10 +54,6 @@ namespace r6sSettingsManager
             Ads4x = int.Parse(iniData["INPUT"]["ADSMouseSensitivity4x"]);
             Ads5x = int.Parse(iniData["INPUT"]["ADSMouseSensitivity5x"]);
             Ads12x = int.Parse(iniData["INPUT"]["ADSMouseSensitivity12x"]);
-
-
-
-
         }
 
     }

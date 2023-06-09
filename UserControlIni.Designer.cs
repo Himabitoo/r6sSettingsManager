@@ -216,6 +216,7 @@
             this.btnApply.TabIndex = 17;
             this.btnApply.Text = "適応する";
             this.btnApply.UseVisualStyleBackColor = true;
+            this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
             // 
             // UserControlIni
             // 
