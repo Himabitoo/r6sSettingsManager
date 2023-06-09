@@ -1,6 +1,5 @@
 ﻿using IniParser;
 using IniParser.Model;
-using System;
 
 namespace r6sSettingsManager
 {

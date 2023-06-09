@@ -1,7 +1,6 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
-using System.Security.Policy;
 using System.Windows.Forms;
 
 namespace r6sSettingsManager
@@ -19,8 +18,6 @@ namespace r6sSettingsManager
             InitializeComponent();
             formHome = new FormHome();
         }
-
-
 
         private void OpenChildForm(Form childForm, object btnSender)
         {
