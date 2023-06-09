@@ -1,4 +1,6 @@
-﻿namespace r6sSettingsManager
+﻿using System.Drawing;
+
+namespace r6sSettingsManager
 {
     partial class FormHome
     {
@@ -40,7 +42,7 @@
             this.tabControlIni.SelectedIndex = 0;
             this.tabControlIni.Size = new System.Drawing.Size(800, 450);
             this.tabControlIni.TabIndex = 0;
-           
+
             // 
             // FormHome
             // 

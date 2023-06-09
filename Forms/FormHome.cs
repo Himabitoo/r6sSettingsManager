@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace r6sSettingsManager
@@ -8,14 +9,12 @@ namespace r6sSettingsManager
         public FormHome()
         {
             InitializeComponent();
+            this.tabControlIni.BackColor = Color.FromArgb(34, 39, 46);
         }
 
 
         public void AddTabPage(TabPage tabPage, String name)
         {
-            //tabPage.Text = name;
-            //tabControlIni.TabPages.Add(tabPage);
-
             tabControlIni.TabPages.Add(tabPage);
             tabPage.Text = name;
         }

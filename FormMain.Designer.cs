@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.PictureBox pictureBoxIcon;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnUpload = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -35,9 +37,29 @@
             this.btnHome = new System.Windows.Forms.Button();
             this.btnToolSettings = new System.Windows.Forms.Button();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.labelGitHubUrl = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.labelUserName = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            pictureBoxIcon = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(pictureBoxIcon)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panelMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // pictureBoxIcon
+            // 
+            pictureBoxIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            pictureBoxIcon.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxIcon.Image")));
+            pictureBoxIcon.Location = new System.Drawing.Point(306, 210);
+            pictureBoxIcon.Name = "pictureBoxIcon";
+            pictureBoxIcon.Size = new System.Drawing.Size(170, 164);
+            pictureBoxIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            pictureBoxIcon.TabIndex = 1;
+            pictureBoxIcon.TabStop = false;
+            pictureBoxIcon.Click += new System.EventHandler(this.pictureBoxIcon_Click);
             // 
             // panel1
             // 
@@ -114,10 +136,60 @@
             // 
             // panelMain
             // 
+            this.panelMain.Controls.Add(this.labelGitHubUrl);
+            this.panelMain.Controls.Add(this.pictureBox1);
+            this.panelMain.Controls.Add(this.labelUserName);
+            this.panelMain.Controls.Add(pictureBoxIcon);
+            this.panelMain.Controls.Add(this.label2);
             this.panelMain.Location = new System.Drawing.Point(0, 81);
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(1035, 507);
             this.panelMain.TabIndex = 2;
+            // 
+            // labelGitHubUrl
+            // 
+            this.labelGitHubUrl.AutoSize = true;
+            this.labelGitHubUrl.Font = new System.Drawing.Font("hooge 05_53", 22F);
+            this.labelGitHubUrl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelGitHubUrl.Location = new System.Drawing.Point(580, 201);
+            this.labelGitHubUrl.Name = "labelGitHubUrl";
+            this.labelGitHubUrl.Size = new System.Drawing.Size(134, 37);
+            this.labelGitHubUrl.TabIndex = 4;
+            this.labelGitHubUrl.Text = "Github";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(597, 241);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(102, 100);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBoxGitHub_Click);
+            // 
+            // labelUserName
+            // 
+            this.labelUserName.AutoSize = true;
+            this.labelUserName.Font = new System.Drawing.Font("hooge 05_53", 22F);
+            this.labelUserName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelUserName.Location = new System.Drawing.Point(299, 170);
+            this.labelUserName.Name = "labelUserName";
+            this.labelUserName.Size = new System.Drawing.Size(193, 37);
+            this.labelUserName.TabIndex = 2;
+            this.labelUserName.Text = "Himabitoo";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("hooge 05_53", 24F);
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(426, 78);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(145, 40);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Credit";
             // 
             // FormMain
             // 
@@ -130,9 +202,13 @@
             this.Controls.Add(this.panel1);
             this.Name = "FormMain";
             this.Text = "r6s Settings Manager";
+            ((System.ComponentModel.ISupportInitialize)(pictureBoxIcon)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panelMain.ResumeLayout(false);
+            this.panelMain.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -146,6 +222,10 @@
         private System.Windows.Forms.Button btnToolSettings;
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Panel panelMain;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelUserName;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label labelGitHubUrl;
     }
 }
 

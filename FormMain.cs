@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
+using System.Security.Policy;
 using System.Windows.Forms;
 
 namespace r6sSettingsManager
@@ -10,6 +11,8 @@ namespace r6sSettingsManager
         //フィールド変数
         private Form activeForm;
         private FormHome formHome;
+        private string urlProfile = "https://github.com/Himabitoo";
+        private string urlRepository = "https://github.com/Himabitoo/r6sSettingsManager";
 
         public FormMain()
         {
@@ -91,6 +94,16 @@ namespace r6sSettingsManager
                     }
                 }
             }
+        }
+
+        private void pictureBoxIcon_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(this.urlProfile);
+        }
+
+        private void pictureBoxGitHub_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(this.urlRepository);
         }
     }
 }
