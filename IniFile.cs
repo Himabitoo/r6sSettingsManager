@@ -46,6 +46,8 @@ namespace r6sSettingsManager
             var parser = new FileIniDataParser();
             IniData iniData = parser.ReadFile(filePath);
 
+
+
             Ads1x = int.Parse(iniData["INPUT"]["ADSMouseSensitivity1x"]);
             Ads1xHalf = int.Parse(iniData["INPUT"]["ADSMouseSensitivity1xHalf"]);
             Ads2x = int.Parse(iniData["INPUT"]["ADSMouseSensitivity2x"]);

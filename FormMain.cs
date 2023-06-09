@@ -72,6 +72,7 @@ namespace r6sSettingsManager
                     iniFile.LoadSensValue();
 
                     UserControlIni userControlIni = new UserControlIni();
+                    userControlIni.FILE_PATH = file;
                     userControlIni.Ads1x = iniFile.Ads1x;
                     userControlIni.Ads1xHalf = iniFile.Ads1xHalf;
                     userControlIni.Ads2x = iniFile.Ads2x;

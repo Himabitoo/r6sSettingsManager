@@ -1,4 +1,6 @@
-﻿using System;
+﻿using IniParser.Model;
+using IniParser;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,12 +19,12 @@ namespace r6sSettingsManager
             InitializeComponent();
         }
 
-        private string filaPath;
+        private string filePath;
 
         public string FILE_PATH
         {
-            get { return this.filaPath; }
-            set { this.filaPath = value.ToString(); }
+            get { return this.filePath; }
+            set { this.filePath = value.ToString(); }
         }
 
 
@@ -75,14 +77,30 @@ namespace r6sSettingsManager
 
         private void btnApply_Click(object sender, EventArgs e)
         {
-            writeSensValue();
+            writeSensValue(this.filePath);
         }
 
         // TextBoxにある値をiniファイルに書き込む
-        public void writeSensValue() { 
-        
-           
+        public void writeSensValue(string filePath) {
 
+            // iniFileに書き込み
+            FileIniDataParser parser = new FileIniDataParser();
+            IniData iniData = parser.ReadFile(filePath);
+
+            // ini形式を用意する
+            iniData["INPUT"]["ADSMouseSensitivity1x"] = Ads1x.ToString();
+            iniData["INPUT"]["ADSMouseSensitivity1xHalf"] = Ads1xHalf.ToString();
+            iniData["INPUT"]["ADSMouseSensitivity2x"] = Ads2x.ToString();
+            iniData["INPUT"]["ADSMouseSensitivity2xHalf"] = Ads2xHalf.ToString();
+            iniData["INPUT"]["ADSMouseSensitivity3x"] = Ads3x.ToString();
+            iniData["INPUT"]["ADSMouseSensitivity4x"] = Ads4x.ToString();
+            iniData["INPUT"]["ADSMouseSensitivity5x"] = Ads5x.ToString();
+            iniData["INPUT"]["ADSMouseSensitivity12x"] = Ads12x.ToString();
+
+            parser.WriteFile(filePath, iniData);
+
+            //Console.WriteLine(iniData);
+            //Console.WriteLine(filePath);
         }
     }
 }
