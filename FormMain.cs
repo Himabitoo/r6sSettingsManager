@@ -72,7 +72,17 @@ namespace r6sSettingsManager
                     iniFile.LoadSensValue();
 
                     UserControlIni userControlIni = new UserControlIni();
+
                     userControlIni.FILE_PATH = file;
+
+                    // 非ADS時のMultiUnit
+                    userControlIni.MultiplierUnit = iniFile.MultiplierUnit;
+
+                    // 水平,垂直感度
+                    userControlIni.SensYaw = iniFile.SensYaw;
+                    userControlIni.SensPitch = iniFile.SensPitch;
+
+                    // Ads感度
                     userControlIni.Ads1x = iniFile.Ads1x;
                     userControlIni.Ads1xHalf = iniFile.Ads1xHalf;
                     userControlIni.Ads2x = iniFile.Ads2x;

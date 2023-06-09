@@ -9,7 +9,7 @@ namespace r6sSettingsManager
     public partial class UserControlIni : UserControl
     {
 
-        private System.Windows.Forms.ProgressBar progressBar;
+        private ProgressBar progressBar;
         private string filePath;
 
         public UserControlIni()
@@ -47,6 +47,14 @@ namespace r6sSettingsManager
             IniData iniData = parser.ReadFile(filePath);
 
             // ini形式を用意する
+            // MultiUnit
+            iniData["INPUT"]["MouseSensitivityMultiplierUnit"] = MultiplierUnit.ToString();
+
+            // 水平、垂直
+            iniData["INPUT"]["MouseYawSensitivity"] = SensYaw.ToString();
+            iniData["INPUT"]["MousePitchSensitivity"] = SensPitch.ToString();
+
+            // ads感度
             iniData["INPUT"]["ADSMouseSensitivity1x"] = Ads1x.ToString();
             iniData["INPUT"]["ADSMouseSensitivity1xHalf"] = Ads1xHalf.ToString();
             iniData["INPUT"]["ADSMouseSensitivity2x"] = Ads2x.ToString();
@@ -61,7 +69,7 @@ namespace r6sSettingsManager
 
         private void InitializeProgressBar()
         {
-            progressBar = new System.Windows.Forms.ProgressBar();
+            progressBar = new ProgressBar();
             progressBar.Minimum = 0;
             progressBar.Maximum = 100;
             progressBar.Style = ProgressBarStyle.Marquee;
@@ -80,11 +88,30 @@ namespace r6sSettingsManager
         }
 
 
+        public float MultiplierUnit
+        {
+            get { return float.Parse(this.textBoxMultiplierUnit.Text); }
+            set { this.textBoxMultiplierUnit.Text = value.ToString(); }
+        }
+
+        public int SensYaw
+        {
+            get { return int.Parse(this.textBoxSensYaw.Text); }
+            set { this.textBoxSensYaw.Text = value.ToString(); }
+        }
+
+        public int SensPitch
+        {
+            get { return int.Parse(this.textBoxSensPitch.Text); }
+            set { this.textBoxSensPitch.Text = value.ToString(); }
+        }
+
         public int Ads1x
         {
             get { return int.Parse(this.textBoxAds1x.Text); }
             set { this.textBoxAds1x.Text = value.ToString(); }
         }
+
 
         public int Ads1xHalf
         {
