@@ -210,8 +210,7 @@
             this.checkBoxApplyAll.TabIndex = 16;
             this.checkBoxApplyAll.Text = "iniファイルすべてにこの設定を適応する(未実装)";
             this.checkBoxApplyAll.UseVisualStyleBackColor = true;
-            //this.checkBoxApplyAll.CheckedChanged += new System.EventHandler(this.checkBoxApplyAll_CheckedChanged);
-            //this.checkBoxApplyAll.Click += new System.EventHandler(this.checkBoxApplyAll_Click);
+
             // 
             // btnApply
             // 
