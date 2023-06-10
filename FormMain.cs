@@ -135,7 +135,6 @@ namespace r6sSettingsManager
 
                     if (formHome != null)
                     {
-                        // formHomeのTabPageにnewしたtabPageを当てて、ファイル名をtabの名前に設定する。
                         formHome.AddTabPage(tabPage, Path.GetFileName(Path.GetDirectoryName(file)));
                     }
                 }

@@ -14,7 +14,14 @@ namespace r6sSettingsManager
 
         public void AddTabPage(TabPage tabPage, String name)
         {
+            // 同じ名前のTabPageがすでに存在する場合は追加せずに終了する
+            if (tabControlIni.TabPages.ContainsKey(name))
+            {
+                return;
+            }
+
             tabControlIni.TabPages.Add(tabPage);
+            tabPage.Name = name;
             tabPage.Text = name;
         }
 

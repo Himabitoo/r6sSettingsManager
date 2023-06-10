@@ -9,8 +9,8 @@ namespace r6sSettingsManager
     public partial class UserControlIni : UserControl
     {
 
-        private ProgressBar progressBar;
         private string filePath;
+        private ProgressBar progressBar;
 
         public UserControlIni()
         {
@@ -28,7 +28,7 @@ namespace r6sSettingsManager
             await Task.Run(() =>
             {
                 // ファイルの保存処理を実行
-                writeSensValue(this.filePath);
+                WriteSettingsToFile(this.filePath);
             });
 
             // プログレスバーを非表示
@@ -40,7 +40,7 @@ namespace r6sSettingsManager
 
 
         // TextBoxにある値をiniファイルに書き込む
-        public void writeSensValue(string filePath) {
+        private void WriteSettingsToFile(string filePath) {
 
             // iniFileに書き込み
             FileIniDataParser parser = new FileIniDataParser();
@@ -66,6 +66,16 @@ namespace r6sSettingsManager
 
             // 書き込み
             parser.WriteFile(filePath, iniData);
+        }
+
+        private void checkBoxApplyAll_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxApplyAll_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("未実装のためクリックできません", "注意", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void InitializeProgressBar()
