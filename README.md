@@ -1,5 +1,8 @@
 # r6s Settings Manager
 
+## 問題点、改善店について
+Issueにて大歓迎
+
 ## どんなツール？
 r6sのゲームの設定ファイルを管理するためのツールです。
 
@@ -25,3 +28,4 @@ r6sのゲームの設定ファイルを管理するためのツールです。
 
 ### ⑦編集したいファイルのファイル名の変えたい感度を変えて「適応する」をクリックする
 ![image](https://github.com/Himabitoo/r6sSettingsManager/assets/94416199/ff025051-bd12-4db3-a6f1-4b519a5f027c)
+
