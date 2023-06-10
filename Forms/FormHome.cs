@@ -12,7 +12,6 @@ namespace r6sSettingsManager
             this.tabControlIni.BackColor = Color.FromArgb(34, 39, 46);
         }
 
-
         public void AddTabPage(TabPage tabPage, String name)
         {
             tabControlIni.TabPages.Add(tabPage);

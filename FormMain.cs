@@ -1,4 +1,6 @@
-﻿using System;
+﻿using IniParser.Model;
+using IniParser;
+using System;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
@@ -8,6 +10,8 @@ namespace r6sSettingsManager
     public partial class FormMain : Form
     {
         //フィールド変数
+        private string SettingsFilePath;
+        private string settingsFolderPath;
         private Form activeForm;
         private FormHome formHome;
         private string urlProfile = "https://github.com/Himabitoo";
@@ -17,9 +21,29 @@ namespace r6sSettingsManager
         {
             InitializeComponent();
             formHome = new FormHome();
+
+            // exeファイルのパスを取得
+            string exeFilePath = Application.ExecutablePath;
+
+            // exeファイルと同じディレクトリのパスを取得
+            string exeDirectory = Path.GetDirectoryName(exeFilePath);
+
+            // Settings.iniファイルのパスを作成
+            SettingsFilePath = Path.Combine(exeDirectory, "Settings.ini");
+
+            // 読み込み作業
+            // Ini読み込み
+            var parser = new FileIniDataParser();
+            IniData iniData = parser.ReadFile(SettingsFilePath);
+
+            if (iniData["PATH"]["r6sSettingsFolder"] != "")
+            {
+                this.settingsFolderPath = iniData["PATH"]["r6sSettingsFolder"];
+            }
+
         }
 
-        private void OpenChildForm(Form childForm, object btnSender)
+        private void OpenChildForm(Form childForm, object btnSender, string filePath = null)
         {
             if (activeForm != null && activeForm.GetType() == childForm.GetType())
             {
@@ -42,8 +66,15 @@ namespace r6sSettingsManager
         ///ホームフォーム
         /// </summary>
         private void btnHome_Click(object sender, EventArgs e)
-        {
+        {   
+
             OpenChildForm(formHome, sender);
+
+            if (settingsFolderPath != "")
+            {
+                openFolder(this.settingsFolderPath);
+            }
+            
         }
 
         /// <summary>
@@ -59,13 +90,18 @@ namespace r6sSettingsManager
             //ダイアログを表示して選択されたファイルのpath(複数可)
             string selectedFolder = IniFileDialog.ShowDialog();
 
+            openFolder(selectedFolder);
+        }
+
+        public void openFolder(string selectedFolder)
+        {
             if (!string.IsNullOrEmpty(selectedFolder))
             {
                 // 親ディレクトリからGameSettings.iniを全取得する
                 string[] iniFiles = Directory.GetFiles(selectedFolder, "GameSettings.ini", SearchOption.AllDirectories);
 
                 foreach (string file in iniFiles)
-                {   
+                {
                     // iniファイル
                     IniFile iniFile = new IniFile(file);
                     iniFile.LoadSensValue();
@@ -98,7 +134,7 @@ namespace r6sSettingsManager
                     FormHome formHome = Application.OpenForms.OfType<FormHome>().FirstOrDefault();
 
                     if (formHome != null)
-                    {   
+                    {
                         // formHomeのTabPageにnewしたtabPageを当てて、ファイル名をtabの名前に設定する。
                         formHome.AddTabPage(tabPage, Path.GetFileName(Path.GetDirectoryName(file)));
                     }

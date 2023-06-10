@@ -12,6 +12,7 @@ namespace r6sSettingsManager
         private string textBoxClickMsg = "ここには入力できません。\n参照ボタンを使ってください。";
         private string saveMsg= "設定の保存が完了しました。";
         private string resetMsg= "設定の初期化が完了しました。";
+        private string restartMsg = "設定が変わったため再起動を行います。";
         private string warningMsg = "Rainbow Six Siege フォルダのパスの入力欄が空です。";
 
         public FormToolSettings()
@@ -69,7 +70,11 @@ namespace r6sSettingsManager
                 // 書き込み
                 parser.WriteFile(SettingsFilePath, iniData);
 
-                MessageBox.Show(string.Format(saveMsg), "完了", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(string.Format(restartMsg), "再起動", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                // 再起動
+                Application.Restart();
+
             }
             else
             {
@@ -96,6 +101,10 @@ namespace r6sSettingsManager
             parser.WriteFile(SettingsFilePath, iniData);
 
             MessageBox.Show(string.Format(resetMsg), "完了", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(string.Format(restartMsg), "再起動", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            // 再起動
+            Application.Restart();
         }
 
 
