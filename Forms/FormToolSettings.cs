@@ -1,14 +1,18 @@
-﻿using System;
+﻿using IniParser.Model;
+using IniParser;
+using System;
 using System.IO;
 using System.Windows.Forms;
 
 namespace r6sSettingsManager
 {
     public partial class FormToolSettings : Form
-    {
-
-        private string saveMsg= "設定の保存が完了しました。";
+    {   
         private string settingsFilePath;
+        private string textBoxClickMsg = "ここには入力できません。\n参照ボタンを使ってください。";
+        private string saveMsg= "設定の保存が完了しました。";
+        private string resetMsg= "設定の初期化が完了しました。";
+        private string warningMsg = "Rainbow Six Siege フォルダのパスの入力欄が空です。";
 
         public FormToolSettings()
         {
@@ -21,15 +25,20 @@ namespace r6sSettingsManager
             string exeDirectory = Path.GetDirectoryName(exeFilePath);
 
             // Settings.iniファイルのパスを作成
-            this.settingsFilePath = Path.Combine(exeDirectory, "Settings.ini");
+            SettingsFilePath = Path.Combine(exeDirectory, "Settings.ini");
 
             // iniに書かれている設定を読み込む
-            loadToolSettings();
+            loadToolSettings(SettingsFilePath);
         }
 
-        private void loadToolSettings()
+        // 読み込む
+        private void loadToolSettings(string filePath)
         {
+            // Ini読み込み
+            var parser = new FileIniDataParser();
+            IniData iniData = parser.ReadFile(filePath);
 
+            this.textBoxFolderPath.Text = iniData["PATH"]["r6sSettingsFolder"];
         }
 
 
@@ -47,25 +56,58 @@ namespace r6sSettingsManager
         private void btnSaveSetting_Click(object sender, EventArgs e)
         {
             // テキストボックスが空じゃなかったら
-            if (this.textBoxFolderPath.Text != null)
+            if (this.textBoxFolderPath.Text != "")
             {
-                // save Tool Setting
+                // iniFileに書き込み
+                FileIniDataParser parser = new FileIniDataParser();
+                IniData iniData = parser.ReadFile(SettingsFilePath);
 
+                // ini形式を用意する
+                // MultiUnit
+                iniData["PATH"]["r6sSettingsFolder"] = this.textBoxFolderPath.Text;
 
+                // 書き込み
+                parser.WriteFile(SettingsFilePath, iniData);
 
                 MessageBox.Show(string.Format(saveMsg), "完了", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
 
+                MessageBox.Show(string.Format(warningMsg), "処理を止めました", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-            
             }
         }
 
         private void btnResetSetting_Click(object sender, EventArgs e)
         {
-            
+            // テキストボックスの中身を空にする
+            this.textBoxFolderPath.Text = "";
+
+            // iniFileに書き込み
+            FileIniDataParser parser = new FileIniDataParser();
+            IniData iniData = parser.ReadFile(SettingsFilePath);
+
+            // ini形式を用意する
+            // MultiUnit
+            iniData["PATH"]["r6sSettingsFolder"] = this.textBoxFolderPath.Text;
+
+            // 書き込み
+            parser.WriteFile(SettingsFilePath, iniData);
+
+            MessageBox.Show(string.Format(resetMsg), "完了", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+
+        private void textBoxFolderPath_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(string.Format(textBoxClickMsg), "注意", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+
+        // getter setter
+        public string SettingsFilePath { get { return this.settingsFilePath; } set {  this.settingsFilePath = value; } }
+
+
     }
 }

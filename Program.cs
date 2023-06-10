@@ -36,9 +36,13 @@ namespace r6sSettingsManager
             using (StreamWriter writer = File.CreateText(settingsFilePath))
             {
                 // 初期の設定項目を書き込む
-                writer.WriteLine("[General]");
-                writer.WriteLine("Option1 = Value1");
-                writer.WriteLine("Option2 = Value2");
+                //writer.WriteLine("[NAME]");
+                //writer.WriteLine("r6sSettingsFolder = ");
+                //writer.WriteLine("\n");
+                writer.WriteLine("[PATH]");
+                writer.WriteLine("r6sSettingsFolder = ");
+
+
                 // 必要な設定項目を追加する...
 
                 writer.Flush();

@@ -64,6 +64,7 @@ namespace r6sSettingsManager
             iniData["INPUT"]["ADSMouseSensitivity5x"] = Ads5x.ToString();
             iniData["INPUT"]["ADSMouseSensitivity12x"] = Ads12x.ToString();
 
+            // 書き込み
             parser.WriteFile(filePath, iniData);
         }
 

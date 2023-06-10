@@ -54,6 +54,7 @@
             this.textBoxFolderPath.ReadOnly = true;
             this.textBoxFolderPath.Size = new System.Drawing.Size(298, 23);
             this.textBoxFolderPath.TabIndex = 1;
+            this.textBoxFolderPath.Click += new System.EventHandler(this.textBoxFolderPath_Click);
             // 
             // btnBrowsFolder
             // 
