@@ -57,11 +57,11 @@
             // labelAds1x
             // 
             this.labelAds1x.AutoSize = true;
-            this.labelAds1x.Font = new System.Drawing.Font("MS UI Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.labelAds1x.Font = new System.Drawing.Font("UD デジタル 教科書体 NK-B", 12F, System.Drawing.FontStyle.Bold);
             this.labelAds1x.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.labelAds1x.Location = new System.Drawing.Point(139, 139);
             this.labelAds1x.Name = "labelAds1x";
-            this.labelAds1x.Size = new System.Drawing.Size(53, 18);
+            this.labelAds1x.Size = new System.Drawing.Size(59, 18);
             this.labelAds1x.TabIndex = 0;
             this.labelAds1x.Text = "Ads1x";
             // 
@@ -82,11 +82,11 @@
             // labelAds1xHalf
             // 
             this.labelAds1xHalf.AutoSize = true;
-            this.labelAds1xHalf.Font = new System.Drawing.Font("MS UI Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.labelAds1xHalf.Font = new System.Drawing.Font("UD デジタル 教科書体 NK-B", 12F, System.Drawing.FontStyle.Bold);
             this.labelAds1xHalf.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.labelAds1xHalf.Location = new System.Drawing.Point(139, 168);
             this.labelAds1xHalf.Name = "labelAds1xHalf";
-            this.labelAds1xHalf.Size = new System.Drawing.Size(83, 18);
+            this.labelAds1xHalf.Size = new System.Drawing.Size(95, 18);
             this.labelAds1xHalf.TabIndex = 2;
             this.labelAds1xHalf.Text = "Ads1xHalf";
             // 
@@ -100,11 +100,11 @@
             // labelAds2x
             // 
             this.labelAds2x.AutoSize = true;
-            this.labelAds2x.Font = new System.Drawing.Font("MS UI Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.labelAds2x.Font = new System.Drawing.Font("UD デジタル 教科書体 NK-B", 12F, System.Drawing.FontStyle.Bold);
             this.labelAds2x.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.labelAds2x.Location = new System.Drawing.Point(139, 196);
             this.labelAds2x.Name = "labelAds2x";
-            this.labelAds2x.Size = new System.Drawing.Size(53, 18);
+            this.labelAds2x.Size = new System.Drawing.Size(59, 18);
             this.labelAds2x.TabIndex = 4;
             this.labelAds2x.Text = "Ads2x";
             // 
@@ -118,11 +118,11 @@
             // labelAds2xHalf
             // 
             this.labelAds2xHalf.AutoSize = true;
-            this.labelAds2xHalf.Font = new System.Drawing.Font("MS UI Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.labelAds2xHalf.Font = new System.Drawing.Font("UD デジタル 教科書体 NK-B", 12F, System.Drawing.FontStyle.Bold);
             this.labelAds2xHalf.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.labelAds2xHalf.Location = new System.Drawing.Point(139, 224);
             this.labelAds2xHalf.Name = "labelAds2xHalf";
-            this.labelAds2xHalf.Size = new System.Drawing.Size(83, 18);
+            this.labelAds2xHalf.Size = new System.Drawing.Size(95, 18);
             this.labelAds2xHalf.TabIndex = 6;
             this.labelAds2xHalf.Text = "Ads2xHalf";
             // 
@@ -136,11 +136,11 @@
             // labelAds3x
             // 
             this.labelAds3x.AutoSize = true;
-            this.labelAds3x.Font = new System.Drawing.Font("MS UI Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.labelAds3x.Font = new System.Drawing.Font("UD デジタル 教科書体 NK-B", 12F, System.Drawing.FontStyle.Bold);
             this.labelAds3x.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.labelAds3x.Location = new System.Drawing.Point(139, 253);
             this.labelAds3x.Name = "labelAds3x";
-            this.labelAds3x.Size = new System.Drawing.Size(53, 18);
+            this.labelAds3x.Size = new System.Drawing.Size(59, 18);
             this.labelAds3x.TabIndex = 8;
             this.labelAds3x.Text = "Ads3x";
             // 
@@ -154,11 +154,11 @@
             // labelAds4x
             // 
             this.labelAds4x.AutoSize = true;
-            this.labelAds4x.Font = new System.Drawing.Font("MS UI Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.labelAds4x.Font = new System.Drawing.Font("UD デジタル 教科書体 NK-B", 12F, System.Drawing.FontStyle.Bold);
             this.labelAds4x.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.labelAds4x.Location = new System.Drawing.Point(139, 281);
             this.labelAds4x.Name = "labelAds4x";
-            this.labelAds4x.Size = new System.Drawing.Size(53, 18);
+            this.labelAds4x.Size = new System.Drawing.Size(59, 18);
             this.labelAds4x.TabIndex = 10;
             this.labelAds4x.Text = "Ads4x";
             // 
@@ -172,11 +172,11 @@
             // labelAds5x
             // 
             this.labelAds5x.AutoSize = true;
-            this.labelAds5x.Font = new System.Drawing.Font("MS UI Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.labelAds5x.Font = new System.Drawing.Font("UD デジタル 教科書体 NK-B", 12F, System.Drawing.FontStyle.Bold);
             this.labelAds5x.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.labelAds5x.Location = new System.Drawing.Point(139, 309);
             this.labelAds5x.Name = "labelAds5x";
-            this.labelAds5x.Size = new System.Drawing.Size(53, 18);
+            this.labelAds5x.Size = new System.Drawing.Size(59, 18);
             this.labelAds5x.TabIndex = 12;
             this.labelAds5x.Text = "Ads5x";
             // 
@@ -190,11 +190,11 @@
             // labelAds12x
             // 
             this.labelAds12x.AutoSize = true;
-            this.labelAds12x.Font = new System.Drawing.Font("MS UI Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.labelAds12x.Font = new System.Drawing.Font("UD デジタル 教科書体 NK-B", 12F, System.Drawing.FontStyle.Bold);
             this.labelAds12x.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.labelAds12x.Location = new System.Drawing.Point(139, 334);
             this.labelAds12x.Name = "labelAds12x";
-            this.labelAds12x.Size = new System.Drawing.Size(62, 18);
+            this.labelAds12x.Size = new System.Drawing.Size(70, 18);
             this.labelAds12x.TabIndex = 14;
             this.labelAds12x.Text = "Ads12x";
             // 
@@ -202,11 +202,11 @@
             // 
             this.checkBoxApplyAll.AutoSize = true;
             this.checkBoxApplyAll.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.checkBoxApplyAll.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.checkBoxApplyAll.Font = new System.Drawing.Font("UD デジタル 教科書体 NK-B", 12F, System.Drawing.FontStyle.Bold);
             this.checkBoxApplyAll.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.checkBoxApplyAll.Location = new System.Drawing.Point(403, 208);
             this.checkBoxApplyAll.Name = "checkBoxApplyAll";
-            this.checkBoxApplyAll.Size = new System.Drawing.Size(262, 20);
+            this.checkBoxApplyAll.Size = new System.Drawing.Size(290, 22);
             this.checkBoxApplyAll.TabIndex = 16;
             this.checkBoxApplyAll.Text = "iniファイルすべてにこの設定を適応する";
             this.checkBoxApplyAll.UseVisualStyleBackColor = true;
@@ -214,7 +214,7 @@
             // btnApply
             // 
             this.btnApply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnApply.Font = new System.Drawing.Font("hooge 05_53", 11F);
+            this.btnApply.Font = new System.Drawing.Font("UD デジタル 教科書体 NK-B", 12F, System.Drawing.FontStyle.Bold);
             this.btnApply.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnApply.Location = new System.Drawing.Point(470, 281);
             this.btnApply.Name = "btnApply";
@@ -234,11 +234,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("MS UI Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label1.Font = new System.Drawing.Font("UD デジタル 教科書体 NK-B", 12F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label1.Location = new System.Drawing.Point(115, 51);
+            this.label1.Location = new System.Drawing.Point(105, 52);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 18);
+            this.label1.Size = new System.Drawing.Size(122, 18);
             this.label1.TabIndex = 18;
             this.label1.Text = "MultiplierUnit";
             // 
@@ -252,11 +252,11 @@
             // labelSensYaw
             // 
             this.labelSensYaw.AutoSize = true;
-            this.labelSensYaw.Font = new System.Drawing.Font("MS UI Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.labelSensYaw.Font = new System.Drawing.Font("UD デジタル 教科書体 NK-B", 12F, System.Drawing.FontStyle.Bold);
             this.labelSensYaw.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.labelSensYaw.Location = new System.Drawing.Point(346, 52);
             this.labelSensYaw.Name = "labelSensYaw";
-            this.labelSensYaw.Size = new System.Drawing.Size(44, 18);
+            this.labelSensYaw.Size = new System.Drawing.Size(40, 18);
             this.labelSensYaw.TabIndex = 20;
             this.labelSensYaw.Text = "水平";
             // 
@@ -270,11 +270,11 @@
             // labelSensPitch
             // 
             this.labelSensPitch.AutoSize = true;
-            this.labelSensPitch.Font = new System.Drawing.Font("MS UI Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.labelSensPitch.Font = new System.Drawing.Font("UD デジタル 教科書体 NK-B", 12F, System.Drawing.FontStyle.Bold);
             this.labelSensPitch.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.labelSensPitch.Location = new System.Drawing.Point(525, 53);
             this.labelSensPitch.Name = "labelSensPitch";
-            this.labelSensPitch.Size = new System.Drawing.Size(44, 18);
+            this.labelSensPitch.Size = new System.Drawing.Size(40, 18);
             this.labelSensPitch.TabIndex = 22;
             this.labelSensPitch.Text = "垂直";
             // 
@@ -308,7 +308,7 @@
             this.Controls.Add(this.textBoxAds1x);
             this.Controls.Add(this.labelAds1x);
             this.Name = "UserControlIni";
-            this.Size = new System.Drawing.Size(1295, 743);
+            this.Size = new System.Drawing.Size(1311, 762);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -57,11 +57,14 @@ namespace r6sSettingsManager
         private void btnUpload_Click(object sender, EventArgs e)
         {
             //ダイアログを表示して選択されたファイルのpath(複数可)
-            string[] selectedFiles = IniFileDialog.ShowDialog();
+            string selectedFolder = IniFileDialog.ShowDialog();
 
-            if (selectedFiles != null)
+            if (!string.IsNullOrEmpty(selectedFolder))
             {
-                foreach (string file in selectedFiles)
+                // 親ディレクトリからGameSettings.iniを全取得する
+                string[] iniFiles = Directory.GetFiles(selectedFolder, "GameSettings.ini", SearchOption.AllDirectories);
+
+                foreach (string file in iniFiles)
                 {   
                     // iniファイル
                     IniFile iniFile = new IniFile(file);
@@ -95,8 +98,9 @@ namespace r6sSettingsManager
                     FormHome formHome = Application.OpenForms.OfType<FormHome>().FirstOrDefault();
 
                     if (formHome != null)
-                    {
-                        formHome.AddTabPage(tabPage,Path.GetFileName(file));
+                    {   
+                        // formHomeのTabPageにnewしたtabPageを当てて、ファイル名をtabの名前に設定する。
+                        formHome.AddTabPage(tabPage, Path.GetFileName(Path.GetDirectoryName(file)));
                     }
                 }
             }

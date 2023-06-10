@@ -8,7 +8,6 @@ namespace r6sSettingsManager
         // フィールド
 
         // ファイル名,path
-        private string filename;
         private string filePath;
 
         // 垂直水平のMultiUnit,垂直,水平

@@ -4,23 +4,20 @@ namespace r6sSettingsManager
 {
     public class IniFileDialog
     {
-        public static string[] ShowDialog()
+        public static string ShowDialog()
         {
-            // Dialog変数を宣言
-            OpenFileDialog dialog = new OpenFileDialog();
+            // ダイアログ変数を宣言
+            FolderBrowserDialog dialog = new FolderBrowserDialog();
 
-            // Dialogでフィルターするファイルを指定する
-            dialog.Filter = "INI ファイル (*.ini)|*.ini";
-
-            // 複数選択 True
-            dialog.Multiselect = true;
+            // 初期フォルダを設定
+            //dialog.SelectedPath = initialDirectory;
 
             if (dialog.ShowDialog() == DialogResult.OK)
             {
 
                 // OKボタンを押されたときの選択されていたファイルのPATHを返す。
                 // これ以降のコードは実行されない。
-                return dialog.FileNames;
+                return dialog.SelectedPath;
             }
 
 

@@ -53,7 +53,7 @@
             // 
             pictureBoxIcon.Cursor = System.Windows.Forms.Cursors.Hand;
             pictureBoxIcon.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxIcon.Image")));
-            pictureBoxIcon.Location = new System.Drawing.Point(302, 204);
+            pictureBoxIcon.Location = new System.Drawing.Point(395, 242);
             pictureBoxIcon.Name = "pictureBoxIcon";
             pictureBoxIcon.Size = new System.Drawing.Size(170, 164);
             pictureBoxIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -69,7 +69,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1035, 81);
+            this.panel1.Size = new System.Drawing.Size(1231, 81);
             this.panel1.TabIndex = 0;
             // 
             // btnUpload
@@ -77,7 +77,7 @@
             this.btnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpload.Font = new System.Drawing.Font("hooge 05_53", 14F);
             this.btnUpload.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnUpload.Location = new System.Drawing.Point(862, 26);
+            this.btnUpload.Location = new System.Drawing.Point(983, 25);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.Size = new System.Drawing.Size(132, 37);
             this.btnUpload.TabIndex = 1;
@@ -90,7 +90,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("hooge 05_53", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(286, 26);
+            this.label1.Location = new System.Drawing.Point(407, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(428, 37);
             this.label1.TabIndex = 0;
@@ -101,9 +101,9 @@
             this.panel2.Controls.Add(this.btnHome);
             this.panel2.Controls.Add(this.btnToolSettings);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 588);
+            this.panel2.Location = new System.Drawing.Point(0, 664);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1035, 43);
+            this.panel2.Size = new System.Drawing.Size(1231, 43);
             this.panel2.TabIndex = 1;
             // 
             // btnHome
@@ -126,7 +126,7 @@
             this.btnToolSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnToolSettings.Font = new System.Drawing.Font("hooge 05_53", 14F);
             this.btnToolSettings.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnToolSettings.Location = new System.Drawing.Point(899, 0);
+            this.btnToolSettings.Location = new System.Drawing.Point(1095, 0);
             this.btnToolSettings.Name = "btnToolSettings";
             this.btnToolSettings.Size = new System.Drawing.Size(136, 43);
             this.btnToolSettings.TabIndex = 0;
@@ -141,9 +141,10 @@
             this.panelMain.Controls.Add(this.labelUserName);
             this.panelMain.Controls.Add(pictureBoxIcon);
             this.panelMain.Controls.Add(this.label2);
+            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(0, 81);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1035, 507);
+            this.panelMain.Size = new System.Drawing.Size(1231, 583);
             this.panelMain.TabIndex = 2;
             // 
             // labelGitHubUrl
@@ -151,7 +152,7 @@
             this.labelGitHubUrl.AutoSize = true;
             this.labelGitHubUrl.Font = new System.Drawing.Font("hooge 05_53", 22F);
             this.labelGitHubUrl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelGitHubUrl.Location = new System.Drawing.Point(580, 218);
+            this.labelGitHubUrl.Location = new System.Drawing.Point(659, 228);
             this.labelGitHubUrl.Name = "labelGitHubUrl";
             this.labelGitHubUrl.Size = new System.Drawing.Size(134, 37);
             this.labelGitHubUrl.TabIndex = 4;
@@ -161,7 +162,7 @@
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(597, 258);
+            this.pictureBox1.Location = new System.Drawing.Point(676, 268);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(102, 100);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -174,7 +175,7 @@
             this.labelUserName.AutoSize = true;
             this.labelUserName.Font = new System.Drawing.Font("hooge 05_53", 22F);
             this.labelUserName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelUserName.Location = new System.Drawing.Point(295, 164);
+            this.labelUserName.Location = new System.Drawing.Point(388, 202);
             this.labelUserName.Name = "labelUserName";
             this.labelUserName.Size = new System.Drawing.Size(193, 37);
             this.labelUserName.TabIndex = 2;
@@ -185,7 +186,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("hooge 05_53", 24F);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(448, 76);
+            this.label2.Location = new System.Drawing.Point(541, 114);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(145, 40);
             this.label2.TabIndex = 0;
@@ -196,7 +197,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1035, 631);
+            this.ClientSize = new System.Drawing.Size(1231, 707);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
