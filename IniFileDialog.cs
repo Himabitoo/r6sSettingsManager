@@ -20,7 +20,6 @@ namespace r6sSettingsManager
                 return dialog.SelectedPath;
             }
 
-
             // OK以外のボタンが押されたらnullを返す。
             return null;
         }

@@ -8,7 +8,7 @@ namespace r6sSettingsManager
 {
     public partial class UserControlIni : UserControl
     {
-
+        private string[] allFilePath;
         private string filePath;
         private ProgressBar progressBar;
 
@@ -29,53 +29,102 @@ namespace r6sSettingsManager
             {
                 // ファイルの保存処理を実行
                 WriteSettingsToFile(this.filePath);
+
             });
 
             // プログレスバーを非表示
             progressBar.Visible = false;
-
-            // 緑の線（完了メッセージ）を表示
-            MessageBox.Show(string.Format($"{filePath}への書き込みが完了しました。"), "完了", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
 
         // TextBoxにある値をiniファイルに書き込む
         private void WriteSettingsToFile(string filePath) {
 
-            // iniFileに書き込み
-            FileIniDataParser parser = new FileIniDataParser();
-            IniData iniData = parser.ReadFile(filePath);
+            // チェックボックスにチェックが入っていたら
+            if(checkBoxApplyAll.Checked) 
+            {
 
-            // ini形式を用意する
-            // MultiUnit
-            iniData["INPUT"]["MouseSensitivityMultiplierUnit"] = MultiplierUnit.ToString();
+                // 再確認
+               DialogResult result = MessageBox.Show(string.Format("読み込まれている全GameSettings.iniファイルに現在のTabの値を設定しようとしています。よろしいでしょうか？"), "確認", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-            // 水平、垂直
-            iniData["INPUT"]["MouseYawSensitivity"] = SensYaw.ToString();
-            iniData["INPUT"]["MousePitchSensitivity"] = SensPitch.ToString();
+                if (result == DialogResult.Yes)
+                {
 
-            // ads感度
-            iniData["INPUT"]["ADSMouseSensitivity1x"] = Ads1x.ToString();
-            iniData["INPUT"]["ADSMouseSensitivity1xHalf"] = Ads1xHalf.ToString();
-            iniData["INPUT"]["ADSMouseSensitivity2x"] = Ads2x.ToString();
-            iniData["INPUT"]["ADSMouseSensitivity2xHalf"] = Ads2xHalf.ToString();
-            iniData["INPUT"]["ADSMouseSensitivity3x"] = Ads3x.ToString();
-            iniData["INPUT"]["ADSMouseSensitivity4x"] = Ads4x.ToString();
-            iniData["INPUT"]["ADSMouseSensitivity5x"] = Ads5x.ToString();
-            iniData["INPUT"]["ADSMouseSensitivity12x"] = Ads12x.ToString();
+                    //ファイルの数だけ繰り返し
+                    foreach (string afp in this.allFilePath)
+                    {
 
-            // 書き込み
-            parser.WriteFile(filePath, iniData);
-        }
+                        // iniFileに書き込み
+                        FileIniDataParser parser = new FileIniDataParser();
+                        IniData iniData = parser.ReadFile(afp);
 
-        private void checkBoxApplyAll_CheckedChanged(object sender, EventArgs e)
-        {
+                        // ini形式を用意する
+                        // MultiUnit
+                        iniData["INPUT"]["MouseSensitivityMultiplierUnit"] = MultiplierUnit.ToString();
 
-        }
+                        // 水平、垂直
+                        iniData["INPUT"]["MouseYawSensitivity"] = SensYaw.ToString();
+                        iniData["INPUT"]["MousePitchSensitivity"] = SensPitch.ToString();
 
-        private void checkBoxApplyAll_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("未実装のためクリックできません", "注意", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        // ads感度
+                        iniData["INPUT"]["ADSMouseSensitivity1x"] = Ads1x.ToString();
+                        iniData["INPUT"]["ADSMouseSensitivity1xHalf"] = Ads1xHalf.ToString();
+                        iniData["INPUT"]["ADSMouseSensitivity2x"] = Ads2x.ToString();
+                        iniData["INPUT"]["ADSMouseSensitivity2xHalf"] = Ads2xHalf.ToString();
+                        iniData["INPUT"]["ADSMouseSensitivity3x"] = Ads3x.ToString();
+                        iniData["INPUT"]["ADSMouseSensitivity4x"] = Ads4x.ToString();
+                        iniData["INPUT"]["ADSMouseSensitivity5x"] = Ads5x.ToString();
+                        iniData["INPUT"]["ADSMouseSensitivity12x"] = Ads12x.ToString();
+
+                        // 書き込み
+                        parser.WriteFile(afp, iniData);
+
+                        // 完了メッセージを表示
+                        MessageBox.Show(string.Format("書き込みが完了しました。"), "完了", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        // 再起動
+                        Application.Restart();
+
+                    }
+                }
+                else{
+
+                    //処理を終わる
+                    return;
+
+                }
+            }
+            else // チェックがない場合その設定をそのファイルだけに反映する
+            {
+                // iniFileに書き込み
+                FileIniDataParser parser = new FileIniDataParser();
+                IniData iniData = parser.ReadFile(filePath);
+
+                // ini形式を用意する
+                // MultiUnit
+                iniData["INPUT"]["MouseSensitivityMultiplierUnit"] = MultiplierUnit.ToString();
+
+                // 水平、垂直
+                iniData["INPUT"]["MouseYawSensitivity"] = SensYaw.ToString();
+                iniData["INPUT"]["MousePitchSensitivity"] = SensPitch.ToString();
+
+                // ads感度
+                iniData["INPUT"]["ADSMouseSensitivity1x"] = Ads1x.ToString();
+                iniData["INPUT"]["ADSMouseSensitivity1xHalf"] = Ads1xHalf.ToString();
+                iniData["INPUT"]["ADSMouseSensitivity2x"] = Ads2x.ToString();
+                iniData["INPUT"]["ADSMouseSensitivity2xHalf"] = Ads2xHalf.ToString();
+                iniData["INPUT"]["ADSMouseSensitivity3x"] = Ads3x.ToString();
+                iniData["INPUT"]["ADSMouseSensitivity4x"] = Ads4x.ToString();
+                iniData["INPUT"]["ADSMouseSensitivity5x"] = Ads5x.ToString();
+                iniData["INPUT"]["ADSMouseSensitivity12x"] = Ads12x.ToString();
+
+                // 書き込み
+                parser.WriteFile(filePath, iniData);
+
+                // 完了メッセージを表示
+                MessageBox.Show(string.Format("書き込みが完了しました。"), "完了", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+        
         }
 
         private void InitializeProgressBar()
@@ -90,6 +139,12 @@ namespace r6sSettingsManager
             Controls.Add(progressBar);
         }
 
+
+        public string[] ALL_FILE_PATH
+        {
+            get { return this.allFilePath; }
+            set { this.allFilePath = value; }
+        }
 
 
         public string FILE_PATH

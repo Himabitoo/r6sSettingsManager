@@ -70,6 +70,7 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="GlobalVariables.cs" />
     <Compile Include="IniFile.cs" />
     <Compile Include="IniFileDialog.cs" />
     <Compile Include="Program.cs" />

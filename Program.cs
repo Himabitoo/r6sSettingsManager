@@ -39,9 +39,6 @@ namespace r6sSettingsManager
                 writer.WriteLine("[PATH]");
                 writer.WriteLine("r6sSettingsFolder = ");
 
-
-                // 必要な設定項目を追加する...
-
                 writer.Flush();
             }
         }

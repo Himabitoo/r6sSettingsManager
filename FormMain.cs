@@ -4,6 +4,7 @@ using System;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using System.Collections.Generic;
 
 namespace r6sSettingsManager
 {
@@ -111,6 +112,7 @@ namespace r6sSettingsManager
 
                     UserControlIni userControlIni = new UserControlIni();
 
+                    userControlIni.ALL_FILE_PATH = iniFiles;
                     userControlIni.FILE_PATH = file;
 
                     // 非ADS時のMultiUnit

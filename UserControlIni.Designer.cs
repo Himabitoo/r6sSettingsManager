@@ -201,7 +201,6 @@
             // checkBoxApplyAll
             // 
             this.checkBoxApplyAll.AutoSize = true;
-            this.checkBoxApplyAll.Enabled = false;
             this.checkBoxApplyAll.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.checkBoxApplyAll.Font = new System.Drawing.Font("UD デジタル 教科書体 NK-B", 12F, System.Drawing.FontStyle.Bold);
             this.checkBoxApplyAll.ForeColor = System.Drawing.SystemColors.ButtonFace;
@@ -211,8 +210,8 @@
             this.checkBoxApplyAll.TabIndex = 16;
             this.checkBoxApplyAll.Text = "iniファイルすべてにこの設定を適応する(未実装)";
             this.checkBoxApplyAll.UseVisualStyleBackColor = true;
-            this.checkBoxApplyAll.CheckedChanged += new System.EventHandler(this.checkBoxApplyAll_CheckedChanged);
-            this.checkBoxApplyAll.Click += new System.EventHandler(this.checkBoxApplyAll_Click);
+            //this.checkBoxApplyAll.CheckedChanged += new System.EventHandler(this.checkBoxApplyAll_CheckedChanged);
+            //this.checkBoxApplyAll.Click += new System.EventHandler(this.checkBoxApplyAll_Click);
             // 
             // btnApply
             // 
