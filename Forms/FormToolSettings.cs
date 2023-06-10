@@ -45,6 +45,9 @@ namespace r6sSettingsManager
 
         private void btnBrowsFolder_Click(object sender, EventArgs e)
         {
+            // ヒント
+            MessageBox.Show(string.Format("My Gamesフォルダ内の「Rainbow Six Siege」フォルダを選択してください。"), "注意", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
             //ダイアログを表示して選択されたファイルのpath(複数可)
             string selectedFolder = IniFileDialog.ShowDialog();
 
@@ -69,6 +72,9 @@ namespace r6sSettingsManager
 
                 // 書き込み
                 parser.WriteFile(SettingsFilePath, iniData);
+
+                // ヒント
+                MessageBox.Show(string.Format("設定が保存されました。"), "完了", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 MessageBox.Show(string.Format(restartMsg), "再起動", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
