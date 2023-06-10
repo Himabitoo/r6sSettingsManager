@@ -86,7 +86,10 @@ namespace r6sSettingsManager
         }
 
         private void btnUpload_Click(object sender, EventArgs e)
-        {
+        {   
+            // ヒント
+            MessageBox.Show(string.Format("My Gamesフォルダ内の「Rainbow Six Siege」フォルダを選択してください。"), "注意", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
             //ダイアログを表示して選択されたファイルのpath(複数可)
             string selectedFolder = IniFileDialog.ShowDialog();
 
