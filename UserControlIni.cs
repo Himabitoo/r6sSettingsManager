@@ -46,12 +46,14 @@ namespace r6sSettingsManager
                 // 再確認
                DialogResult result = MessageBox.Show(string.Format("読み込まれている全GameSettings.iniファイルに現在のTabの値を設定しようとしています。よろしいでしょうか？"), "確認", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
+                // はいを押したら
                 if (result == DialogResult.Yes)
                 {
-
                     //ファイルの数だけ繰り返し
                     foreach (string afp in this.allFilePath)
                     {
+
+                        Console.WriteLine(afp);
 
                         // iniFileに書き込み
                         FileIniDataParser parser = new FileIniDataParser();
@@ -78,14 +80,15 @@ namespace r6sSettingsManager
                         // 書き込み
                         parser.WriteFile(afp, iniData);
 
-                        // 完了メッセージを表示
-                        MessageBox.Show(string.Format("書き込みが完了しました。"), "完了", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        // 再起動
-                        Application.Restart();
-
                     }
-                }
+
+                    // 完了メッセージを表示
+                    MessageBox.Show(string.Format("書き込みが完了しました。"), "完了", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // 再起動
+                    Application.Restart();
+
+                }// いいえ
                 else{
 
                     //処理を終わる
